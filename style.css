@@ -17,9 +17,9 @@ nav{
     width: 100%;
     background-image: url(img/robo\ \(1\).png);
     background-repeat: no-repeat;
-    background-position: right 40%;
+    background-position: right 50%;
     background-color: #a4b6ab;
-    
+    background-position: right 30% bottom 40%; 
 }
 
 
@@ -49,7 +49,7 @@ li:hover{
 .meunome{
 position: absolute;
 top: 30%;
-left: 4%;
+left: 15%;
 }
 
 h1{
