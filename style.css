@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding: 30px;
+}
+.caixa-principal{
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/robo\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: right 40%;
+    background-color: #a4b6ab;
+    
+}
+
+
+.portifolio{
+    color: #fff;
+    font-size: 35px;
+}
+
+.portifolio span{
+    color: #889B8B;
+}
+
+li{
+    color:#fff ;
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+li:hover{
+    color: #889B8B;
+    transition: 0.5s;
+}
+
+.meunome{
+position: absolute;
+top: 30%;
+left: 4%;
+}
+
+h1{
+    color: #fff;
+    font-size: 50px;
+}
+
+h1 span{
+    color: #889B8B;
+}
+
+.meunome h3{ 
+color: #fff;
+font-size: 22px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    padding: 60px 15%;
+    background-color: #fff;
+}
+
+section img{
+    height: 400px;
+    border-radius: 100%;
+    border: 2px;
+    margin-right: 30px;
+}
+
+section div h2 {
+    color: #889B8B;
+    font-size: 55px;
+}
+
+section div p {
+    color: black;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+
+}
+
+section div button{
+    color: #ffffff;
+    background-color: #889B8B;
+    height: 45px;
+    width:180px;
+    font-size: 18px;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+}
+
+section div button:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid #889B8B;
+}
