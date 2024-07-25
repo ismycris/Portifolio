@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
     <title>Cris Martins</title>
+    <style>
+        .lang { display: none; }
+        .lang.active { display: block; }
+        #langButton {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #langButton img {
+            width: 30px;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
     
@@ -15,26 +28,62 @@
         <nav>
             <h2 class="portifolio">Portfo<span>lio</span></h2>
             <ul>
-                <li><a>Home</a></li>
-                <li><a>Sobre</a></li>
-                <li><a>Projetos</a></li>
-                <li><a>FaleComigo </a> </li>
+                <li><a >Home</a></li>
+                <li><a >Sobre</a></li>
+                <li><a >Projetos</a></li>
+                <li><a >Fale Comigo</a></li>
+                <li>
+                    <button id="langButton" onclick="changeLanguage()">
+                        <img id="langImage" src="img/197484.png" alt="English">
+                    </button>
+                </li>
             </ul>
         </nav> 
 
         <div class="meunome">
-            <h1>Cristiely <span>Martins</span></h1>
-            <h3>Estudande de Engenharia De Software</h3>
+            <h1 class="lang en active">Cristiely <span>Martins</span></h1>
+            <h1 class="lang pt">Cristiely <span>Martins</span></h1>
+            <h3 class="lang en active">Software Engineering Student</h3>
+            <h3 class="lang pt">Estudante de Engenharia De Software</h3>
         </div>
     </div>
 
     <section>
-        <img src="img/desenhoMe.png" >
+        <img src="img/desenhoMe.png">
         <div>
-            <h2>Sobre mim</h2>
-            <p> Olá! Meu nome é Cristiely e sou estudante de Engenharia de Software na UniAmérica, localizada em Foz do Iguaçu. Minha paixão por tecnologia e inovação me impulsiona a sempre buscar novas formas de aprender e aplicar meus conhecimentos.</p>
-        <button>entre em contato</button>
+            <h2 class="lang en active">About Me</h2>
+            <h2 class="lang pt">Sobre mim</h2>
+            <p class="lang en active">Hello! My name is Cristiely, and I am a Software Engineering student at UniAmérica, located in Foz do Iguaçu. My passion for technology and innovation drives me to always seek new ways to learn and apply my knowledge.</p>
+            <p class="lang pt">Olá! Meu nome é Cristiely e sou estudante de Engenharia de Software na UniAmérica, localizada em Foz do Iguaçu. Minha paixão por tecnologia e inovação me impulsiona a sempre buscar novas formas de aprender e aplicar meus conhecimentos.</p>
+            <button class="lang en active">Contact Me</button>
+            <button class="lang pt">Entre em Contato</button>
         </div>
     </section>
+
+    <script>
+        let currentLang = 'en';
+
+        function changeLanguage() {
+            const elements = document.querySelectorAll('.lang');
+            const langImage = document.getElementById('langImage');
+
+            if (currentLang === 'en') {
+                currentLang = 'pt';
+                langImage.src = 'img/186203.png';
+                langImage.alt = 'Português';
+            } else {
+                currentLang = 'en';
+                langImage.src = 'img/197484.png';
+                langImage.alt = 'English';
+            }
+
+            elements.forEach(el => {
+                el.classList.remove('active');
+                if (el.classList.contains(currentLang)) {
+                    el.classList.add('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
